@@ -2,7 +2,7 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import { TextField } from '@mui/material';
 
-const TextFields = ({ required, value, onChange, type, width = '600px', height = '40px', placeholder }) => {
+const TextFields = ({ label, required, value, onChange, type, width = '600px', height = '40px', placeholder }) => {
   return (
     <div className='text-base font-barlow font-medium'>
       <Box
@@ -13,6 +13,7 @@ const TextFields = ({ required, value, onChange, type, width = '600px', height =
         autoComplete='off'
       >
         <TextField
+          label={label}
           size='small'
           value={value}
           onChange={onChange}

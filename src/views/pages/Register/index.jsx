@@ -12,7 +12,7 @@ const Register = () => {
           <img className='h-24' src='./images/logo2.png' alt='not-found' />
           <p className='flex items-center text-2xl font-medium ml-2'>Đăng ký</p>
         </div>
-        <div className='w-40'/>
+        <div className='w-40' />
       </div>
       <div className='h-600 bg-te-logo'>
         <div className='w-full flex justify-around'>
@@ -22,11 +22,11 @@ const Register = () => {
               <p className='flex justify-center mt-3 font-semibold text-2xl '>Tạo Tài Khoản</p>
               <div className='flex justify-center'>
                 <div>
-                  <TextFields placeholder='Họ Và Tên' required={true} width='450px' />
-                  <TextFields placeholder='Số Điện Thoại' required={true} width='450px' type='tel' />
-                  <TextFields placeholder='Email' required={true} width='450px' type='email' />
-                  <TextFields placeholder='Mật Khẩu' required={true} width='450px' type='password' />
-                  <TextFields placeholder='Xác Nhận Mật Khẩu' required={true} width='450px' type='password' />
+                  <TextFields label='Họ Và Tên' width='450px' />
+                  <TextFields label='Số Điện Thoại' width='450px' type='tel' />
+                  <TextFields label='Email' width='450px' type='email' />
+                  <TextFields label='Mật Khẩu' width='450px' type='password' />
+                  <TextFields label='Xác Nhận Mật Khẩu' width='450px' type='password' />
                   <button type='submit' className='uppercase w-450 h-10 mt-5 bg-te-blue text-white rounded-md'>
                     Đăng Ký
                   </button>

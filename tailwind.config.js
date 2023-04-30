@@ -5,9 +5,11 @@ module.exports = {
   ],
   theme: {
     extend: {
-      margin:{
-        100:'100px'
+      width:{
+        100:'1000px'
+      
       }
+    
     },
   },
   plugins: [],

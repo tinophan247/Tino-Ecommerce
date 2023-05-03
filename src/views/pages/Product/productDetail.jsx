@@ -26,7 +26,7 @@ const ProductDetail = () => {
               <h2 className='text-sm text-gray-500 tracking-widest'>Tino Perfume</h2>
               <h1 className='text-gray-900 text-3xl font-medium mb-1'>Bleu De Chanel Parfum</h1>
               <div>
-                <Chips name='Unisex' />
+                <Chips name='Nam' />
               </div>
               <div className='mt-5'>
                 <p className='leading-relaxed'>

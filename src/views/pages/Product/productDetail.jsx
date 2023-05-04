@@ -51,7 +51,25 @@ const ProductDetail = () => {
                 hướng hiện đại nhưng vẫn giữ lại được những nét cổ điển trong dòng Bleu de Chanel của thương hiệu
                 Chanel.
               </p>
-              <SingleDropdown value={size} handleChange={handleChangeSize} size={'small'} />
+              <div className='flex justify-between'>
+                <SingleDropdown value={size} handleChange={handleChangeSize} size={'small'} />
+                <div className='custom-number-input h-10 w-32'>
+                  <label className='w-full text-gray-700 text-sm font-semibold'>Số lượng</label>
+                  <div className='flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1'>
+                    <button className=' bg-white border border-gray-300 text-gray-600 hover:text-white hover:bg-te-mui h-full w-20 rounded cursor-pointer outline-none'>
+                      <span className='text-2xl font-thin'>-</span>
+                    </button>
+                    <input
+                      disabled
+                      className='text-center w-full bg-gray-white font-semibold text-md flex items-center text-gray-700'
+                      defaultValue={0}
+                    />
+                    <button className=' bg-white border border-gray-300 text-gray-600 hover:text-white hover:bg-te-mui h-full w-20 rounded cursor-pointer outline-none'>
+                      <span className='text-2xl font-thin'>+</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
               <div className='flex justify-between items-center mt-5'>
                 <p className='font-medium text-2xl text-gray-900'>{size === 1 ? '2,800,000 đ' : '3,650,000 đ'}</p>
                 <div className='flex gap-2'>

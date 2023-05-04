@@ -13,12 +13,12 @@ const TextFields = ({ required, value, onChange, type, width = '600px', height =
         autoComplete='off'
       >
         <TextField
+          label={label}
           size='small'
           value={value}
           onChange={onChange}
           required={required ?? null}
           type={type}
-          label={label}
         />
       </Box>
     </div>

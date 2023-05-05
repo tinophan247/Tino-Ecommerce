@@ -3,15 +3,17 @@ import React from 'react';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import SearchField from '../SearchField';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
     <div className='w-full'>
         <div className='bg-black flex justify-end h-10 items-center'>
-          <div className='mr-10 flex'>
-            <button className='mr-20 h-10 text-white hover:text-te-logo '>Tài khoản</button>
-            <button className='mr-20 h-10 text-white hover:text-te-logo '>Giỏ hàng</button>
-            <button className='mr-20 h-10 text-white hover:text-te-logo '>Đăng nhập</button>
+          <div className='mr-10 flex gap-20'>
+            {/* Khi nào đăng nhập rồi mới hiện chỗ này
+            <NavLink to='/login' className='mt-5 h-10 text-white hover:text-te-logo '>Trang cá nhân</NavLink> */}
+            <NavLink to='/register' className='mt-5 h-10 text-white hover:text-te-logo '>Đăng ký</NavLink>
+            <NavLink to='/login' className='mt-5 h-10 text-white hover:text-te-logo '>Đăng nhập</NavLink>
           </div>
       </div>
       <div className='bg-te-logo h-56 flex justify-center '>
@@ -41,7 +43,7 @@ const Header = () => {
             <button className='w-40 h-16 text-white hover:text-te-logo uppercase'>Liên hệ</button>
           </div>
           <button className='flex justify-center group'>
-            <div className='w-16 h-16 flex justify-center items-center text-white group-hover:text-te-logo '>
+            <div className='w-16 h-16 flex justify-center items-center text-white group-hover:text-te-logo'>
               <ShoppingBasketIcon />
             </div>
             <p className='h-16 flex justify-center items-center text-white text-base font-medium group-hover:text-te-logo'>(2)</p>

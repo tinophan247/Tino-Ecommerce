@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import SearchField from '../SearchField';
 
@@ -9,9 +9,9 @@ const Header = () => {
     <div className='w-full'>
         <div className='bg-black flex justify-end h-10 items-center'>
           <div className='mr-10 flex'>
-            <button className='mr-20 h-10 text-white hover:text-gray-400 hover:bg-gray-300'>Tài khoản</button>
-            <button className='mr-20 h-10 text-white hover:text-gray-400 hover:bg-gray-300'>Giỏ hàng</button>
-            <button className='mr-20 h-10 text-white hover:text-gray-400 hover:bg-gray-300'>Đăng nhập</button>
+            <button className='mr-20 h-10 text-white hover:text-te-logo '>Tài khoản</button>
+            <button className='mr-20 h-10 text-white hover:text-te-logo '>Giỏ hàng</button>
+            <button className='mr-20 h-10 text-white hover:text-te-logo '>Đăng nhập</button>
           </div>
       </div>
       <div className='bg-te-logo h-56 flex justify-center '>
@@ -35,16 +35,16 @@ const Header = () => {
         <div className='bg-black h-16 flex justify-center'>
           <div className='flex justify-between w-1500'>
           <div className='w-full flex'>
-            <button className='w-40 h-16 text-white hover:text-gray-400 hover:bg-gray-300 uppercase'>Trang chủ</button>
-            <button className='w-40 h-16 text-white hover:text-gray-400 hover:bg-gray-300 uppercase'>Nước hoa nam</button>
-            <button className='w-40 h-16 text-white hover:text-gray-400 hover:bg-gray-300 uppercase'>Nước hoa nữ</button>
-            <button className='w-40 h-16 text-white hover:text-gray-400 hover:bg-gray-300 uppercase'>Liên hệ</button>
+            <button className='w-40 h-16 text-white hover:text-te-logo uppercase'>Trang chủ</button>
+            <button className='w-40 h-16 text-white hover:text-te-logo uppercase'>Nước hoa nam</button>
+            <button className='w-40 h-16 text-white hover:text-te-logo uppercase'>Nước hoa nữ</button>
+            <button className='w-40 h-16 text-white hover:text-te-logo uppercase'>Liên hệ</button>
           </div>
           <button className='flex justify-center group'>
-            <div className='flex justify-center items-center bg-blue-300 w-16 h-16 group-hover:bg-te-facebook group-hover:text-white'>
-              <ShoppingCartIcon />
+            <div className='w-16 h-16 flex justify-center items-center text-white group-hover:text-te-logo '>
+              <ShoppingBasketIcon />
             </div>
-            <div className='flex justify-center items-center bg-white w-16 h-16 group-hover:bg-te-facebook group-hover:text-white text-base font-medium'>2</div>
+            <p className='h-16 flex justify-center items-center text-white text-base font-medium group-hover:text-te-logo'>(2)</p>
           </button>
           </div>
         </div>

@@ -4,7 +4,7 @@ import { InputAdornment, TextField } from '@mui/material';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
-const TextFieldPassword = ({ required, value, onChange, type, width = '600px', height = '40px', label, error, valid }) => {
+const TextFieldPassword = ({ required, value, onChange, width = '600px', height = '40px', label}) => {
   const [showPass, setShowPass] = useState(false);
 
   return (

@@ -1,8 +1,4 @@
 import React from 'react';
-import GoogleLogo from '../Icons/Google';
-import FacebookLogo from '../Icons/Facebook';
-import TextFields from '../TextField';
-import Divider from '@mui/material';
 
 const LayoutLoginRegister = ({ children, name }) => {
   return (
@@ -10,7 +6,7 @@ const LayoutLoginRegister = ({ children, name }) => {
       <div className='w-full flex justify-around bg-white'>
         <div className='flex'>
           <img className=' h-20' src='./images/logo2.png' alt='not-found' />
-          <p className='flex items-center text-2xl font-medium ml-2'>ĐĂNG NHẬP</p>
+          <p className='flex items-center text-2xl font-medium ml-2'>Đăng nhập</p>
         </div>
         <div className='w-40' />
       </div>

@@ -17,7 +17,7 @@ const Header = () => {
           </div>
       </div>
       <div className='bg-te-logo h-56 flex justify-center '>
-        <div className='w-1600 items-center justify-between flex'>
+        <div className='w-1600 md:w-1200 items-center justify-between flex'>
           <img className='h-56' src='./images/logo.png' alt='not-found' />
           <SearchField/>
           <div className='flex'>
@@ -35,7 +35,7 @@ const Header = () => {
       </div>
       <div >
         <div className='bg-black h-16 flex justify-center'>
-          <div className='flex justify-between w-1500'>
+          <div className='flex justify-between w-1500 md:w-1200'>
           <div className='w-full flex'>
             <button className='w-40 h-16 text-white hover:text-te-logo uppercase'>Trang chủ</button>
             <button className='w-40 h-16 text-white hover:text-te-logo uppercase'>Nước hoa nam</button>

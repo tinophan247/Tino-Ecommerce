@@ -5,6 +5,7 @@ import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import SearchField from '../SearchField';
 import { NavLink } from 'react-router-dom';
 
+
 const Header = () => {
   return (
     <div className='w-full'>

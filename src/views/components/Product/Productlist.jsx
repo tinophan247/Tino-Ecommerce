@@ -1,5 +1,5 @@
 import React from 'react';
-import Product from './Product1';
+import Product from './Product';
 
 const Productlist = ({ title, productData }) => {
   const newProductData = productData.slice(0, 4);

@@ -16,9 +16,9 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div className='relative m-auto my-4 w-4/5 '>
+    <div className='relative m-auto my-4 flex justify-center '>
       <div
-        className='relative block h-56 bg-cover rounded-lg md:h-96 transition duration-500 ease-in-out'
+        className='relative w-1150 block h-56 bg-cover rounded-lg md:h-96 transition duration-500 ease-in-out'
         style={{
           backgroundImage: `url(${slides[curr].url})`,
         }}

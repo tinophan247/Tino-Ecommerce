@@ -4,9 +4,9 @@ import Router from './routes/index';
 
 const App = () => {
   return (
-      <BrowserRouter>
-        <Router />
-      </BrowserRouter>
+    <BrowserRouter>
+      <Router />
+    </BrowserRouter>
   );
 };
 

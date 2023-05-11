@@ -3,6 +3,7 @@ import Product from './Product';
 
 const Productlist = ({ title, productData }) => {
   const newProductData = productData.slice(0, 4);
+
   return (
     <div className='bg-white h-520 mb-12'>
       <div className='flex mx-auto max-w-2xl sm:px-6 lg:max-w-7xl lg:px-8'>

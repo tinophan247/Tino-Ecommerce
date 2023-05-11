@@ -1,10 +1,8 @@
-/* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import SearchField from '../SearchField';
 import { NavLink } from 'react-router-dom';
-
 
 const Header = () => {
   return (

@@ -2,9 +2,12 @@ import React from 'react';
 import TextFields from '../../components/TextField';
 import { Divider } from '@mui/material';
 import FacebookLogo from '../../components/Icons/Facebook';
-import GoogleLogo from '../../components/Icons/Google';
 import LayoutLoginRegister from '../../components/LayoutLoginRegister';
 import TextFieldPassword from '../../components/TextFieldPassword';
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import GoogleLoginButton from '../../components/GoogleLoginButton';
+
+const clientId = '175155271790-6lq44qndvcpif8foa740mom3rffc13pa.apps.googleusercontent.com';
 
 const Login = () => {
   return (
@@ -35,18 +38,18 @@ const Login = () => {
               HOẶC
             </Divider>
             <div className='flex justify-around my-5'>
-              <button className='flex justify-around bg-te-facebook mb-2 w-[150px] rounded px-3 py-2.5 text-xs font-medium uppercase leading-normal text-white'>
+              <button className='flex justify-around bg-te-facebook mb-2 w-150 rounded px-3 py-2.5 text-xs font-medium uppercase leading-normal text-white'>
                 <FacebookLogo />
                 Login Facebook
               </button>
-              <button className='flex justify-around bg-te-google mb-2 w-[150px] rounded px-3 py-2.5 text-xs font-medium uppercase leading-normal text-white'>
-                <GoogleLogo />
-                Login Google
-              </button>
+              <GoogleOAuthProvider 
+                clientId={clientId}>
+                <GoogleLoginButton />
+              </GoogleOAuthProvider>
             </div>
             <p className=' text-gray-400 pt-2 pb-8 pb text-center text-sm'>
               Bạn mới biết đến TinoPerfume?
-              <a href=' ./Register ' className='text-red-600'>
+              <a href='./Register' className='text-red-600'>
                 Đăng ký
               </a>
             </p>

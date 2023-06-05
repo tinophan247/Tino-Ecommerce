@@ -9,7 +9,6 @@ import { loginGoogleActions } from '../../../slices/loginGoogleSlice';
 const Header = () => {
   const { isLoggedIn, credentials } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
-  console.log(credentials);
 
   const [isLogoutVisible, setIsLogoutVisible] = useState(false);
 

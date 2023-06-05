@@ -6,8 +6,7 @@ import LayoutLoginRegister from '../../components/LayoutLoginRegister';
 import TextFieldPassword from '../../components/TextFieldPassword';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import GoogleLoginButton from '../../components/GoogleLoginButton';
-
-const clientId = '175155271790-6lq44qndvcpif8foa740mom3rffc13pa.apps.googleusercontent.com';
+import { clientId } from '../../../constant';
 
 const Login = () => {
   return (
@@ -42,10 +41,9 @@ const Login = () => {
                 <FacebookLogo />
                 Login Facebook
               </button>
-              <GoogleOAuthProvider 
-                clientId={clientId}>
-                <GoogleLoginButton />
-              </GoogleOAuthProvider>
+              <button className='flex justify-around w-150'>
+                <GoogleLoginButton width={150}/>
+              </button>
             </div>
             <p className=' text-gray-400 pt-2 pb-8 pb text-center text-sm'>
               Bạn mới biết đến TinoPerfume?

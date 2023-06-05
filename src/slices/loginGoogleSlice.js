@@ -18,11 +18,13 @@ const loginGoogleSlice = createSlice({
             state.credentials.name = action.payload.name;
             state.credentials.picture = action.payload.picture;
             state.error = false;
+            
         },
         logout(state) {
             state.isLoggedIn = false;
             state.credentials.name = '';
             state.credentials.picture = '';
+            localStorage.clear('token');
         },
         loginFail(state) {
             state.error = true;

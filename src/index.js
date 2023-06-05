@@ -10,7 +10,7 @@ import { clientId } from './constant';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <Provider store={store}>
-    <GoogleOAuthProvider clientId={clientId[0].clientId}>
+    <GoogleOAuthProvider clientId={clientId}>
       <App />
     </GoogleOAuthProvider>
   </Provider>

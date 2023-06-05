@@ -12,7 +12,8 @@ const GoogleLoginButton = ({ width }) => {
   const onSuccess = (res) => {
     const decoded = jwt_decode(res.credential);
     const userProfile = { name: decoded.name, picture: decoded.picture };
-    dispatch(loginGoogleActions.login(userProfile))
+    dispatch(loginGoogleActions.login(userProfile));
+    localStorage.setItem('token', res.credential);
   };
 
   const onError = () => {

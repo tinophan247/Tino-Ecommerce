@@ -15,11 +15,8 @@ export const slides = [
 	},
 ];
 
-export const clientId = [
-  {
-    clientId: '175155271790-6lq44qndvcpif8foa740mom3rffc13pa.apps.googleusercontent.com',
-  }
-];
+export const clientId = '175155271790-6lq44qndvcpif8foa740mom3rffc13pa.apps.googleusercontent.com';
+ 
 
 export const FooterData = [
     {

@@ -12,13 +12,14 @@ const Header = () => {
 
   const [isLogoutVisible, setIsLogoutVisible] = useState(false);
 
-  const toggleLogout = () => {
+  const googleLogout = () => {
     setIsLogoutVisible((prevState) => !prevState);
   };
 
   const handleLogOut = async () => {
     dispatch(loginGoogleActions.logout());
     localStorage.clear();
+    console.log(localStorage);
   };
 
   return (
@@ -34,7 +35,7 @@ const Header = () => {
                     src={credentials.picture}
                     alt=''
                     className='h-7 rounded-2xl relative cursor-pointer'
-                    onClick={toggleLogout}
+                    onClick={googleLogout}
                   />
                 </div>
                 {isLogoutVisible && (

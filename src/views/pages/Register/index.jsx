@@ -2,7 +2,6 @@ import React from 'react';
 import TextFields from '../../components/TextField';
 import { Divider } from '@mui/material';
 import FacebookLogo from '../../components/Icons/Facebook';
-import GoogleLogo from '../../components/Icons/Google';
 import TextFieldPassword from '../../components/TextFieldPassword';
 import GoogleLoginButton from '../../components/GoogleLoginButton';
 

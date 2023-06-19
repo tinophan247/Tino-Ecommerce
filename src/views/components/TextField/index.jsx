@@ -2,7 +2,7 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import { TextField } from '@mui/material';
 
-const TextFields = ({ label, required, value, onChange, type, width = '600px', height = '40px', placeholder }) => {
+const TextFields = ({ required, value, onChange, type, width = '600px', height = '40px', label }) => {
   return (
     <div className='text-base font-barlow font-medium'>
       <Box
@@ -19,7 +19,6 @@ const TextFields = ({ label, required, value, onChange, type, width = '600px', h
           onChange={onChange}
           required={required ?? null}
           type={type}
-          placeholder={placeholder}
         />
       </Box>
     </div>

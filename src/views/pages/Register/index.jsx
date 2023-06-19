@@ -2,7 +2,8 @@ import React from 'react';
 import TextFields from '../../components/TextField';
 import { Divider } from '@mui/material';
 import FacebookLogo from '../../components/Icons/Facebook';
-import GoogleLogo from '../../components/Icons/Google';
+import TextFieldPassword from '../../components/TextFieldPassword';
+import GoogleLoginButton from '../../components/GoogleLoginButton';
 
 const Register = () => {
   return (
@@ -25,8 +26,8 @@ const Register = () => {
                   <TextFields label='Họ Và Tên' width='450px' />
                   <TextFields label='Số Điện Thoại' width='450px' type='tel' />
                   <TextFields label='Email' width='450px' type='email' />
-                  <TextFields label='Mật Khẩu' width='450px' type='password' />
-                  <TextFields label='Xác Nhận Mật Khẩu' width='450px' type='password' />
+                  <TextFieldPassword label='Mật Khẩu' width='450px' type='password' />
+                  <TextFieldPassword label='Xác Nhận Mật Khẩu' width='450px' type='password' />
                   <button type='submit' className='uppercase w-450 h-10 mt-5 bg-te-blue text-white rounded-md'>
                     Đăng Ký
                   </button>
@@ -36,10 +37,10 @@ const Register = () => {
                       <FacebookLogo />
                       Login Facebook
                     </button>
-                    <button className='flex justify-around bg-te-google mb-2 w-200 rounded px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white'>
-                      <GoogleLogo />
-                      Login Google
+                    <button className='mb-2'>
+                      <GoogleLoginButton width={200}/>
                     </button>
+
                   </div>
                 </div>
               </div>

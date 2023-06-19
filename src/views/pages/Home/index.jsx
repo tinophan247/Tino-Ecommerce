@@ -1,12 +1,19 @@
 import React from 'react';
+import Header from '../../components/Header/Header';
+import Productlist from '../../components/Product/Productlist';
+import { bestSellerProduct, newProduct, saleProduct } from '../../../constant';
+import Carousel from '../../components/Carousel';
+import Footer from '../../components/Footer';
 
 const HomePage = () => {
   return (
     <div className='w-full '>
-      <div className=' flex justify-center'>
-        <div className='font-bold text-2xl mt-10'>Chào mừng đến với trang chủ</div>
-      </div>
-      <div className='flex justify-center font-bold text-base mt-5'>Cùng mua sắm nào !</div>
+      <Header />
+      <Carousel/>
+      <Productlist title='Sản phẩm mới' productData={newProduct}/>
+      <Productlist title='Đang bán chạy' productData={bestSellerProduct}/>
+      <Productlist title='Đang giảm giá' productData={saleProduct}/>
+      <Footer/>
     </div>
   );
 };

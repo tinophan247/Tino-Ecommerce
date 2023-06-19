@@ -15,6 +15,9 @@ export const slides = [
 	},
 ];
 
+export const clientId = '175155271790-6lq44qndvcpif8foa740mom3rffc13pa.apps.googleusercontent.com';
+ 
+
 export const FooterData = [
     {
       icon: <RocketLaunchIcon />,
@@ -182,3 +185,5 @@ export const FooterData = [
     },
   
   ]
+
+  

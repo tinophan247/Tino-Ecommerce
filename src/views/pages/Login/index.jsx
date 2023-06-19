@@ -4,9 +4,7 @@ import { Divider } from '@mui/material';
 import FacebookLogo from '../../components/Icons/Facebook';
 import LayoutLoginRegister from '../../components/LayoutLoginRegister';
 import TextFieldPassword from '../../components/TextFieldPassword';
-import { GoogleOAuthProvider } from '@react-oauth/google';
 import GoogleLoginButton from '../../components/GoogleLoginButton';
-import { clientId } from '../../../constant';
 
 const Login = () => {
   return (

@@ -7,8 +7,9 @@ module.exports = {
         'te-logo': '#d2eced',
         'te-blue': '#1fafb5',
         'te-facebook': '#1877f2',
-        'te-google': '#ea4335'
-
+        'te-google': '#ea4335',
+        'te-mui': '#3b82f6',
+        'te-mui-hover': '#2563eb',
       },
       height: {
         500:'500px',

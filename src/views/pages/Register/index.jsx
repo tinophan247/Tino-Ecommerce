@@ -1,11 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
 import TextFields from '../../components/TextField';
 import { Divider } from '@mui/material';
 import FacebookLogo from '../../components/Icons/Facebook';
 import TextFieldPassword from '../../components/TextFieldPassword';
 import GoogleLoginButton from '../../components/GoogleLoginButton';
+import { register } from '../../../slices/authSlice';
+import { useDispatch, useSelector } from 'react-redux';
 
 const Register = () => {
+  const dispatch = useDispatch();
+  const { isSuccess } = useSelector((state) => state.auth); 
+  const [confirmPassword , setConfirmPassword ] = useState("");
+  const [formState, setFormState] = useState({
+    fullName: "",
+    name: "",
+    phoneNumber: "",
+    email: "",
+    password: ""
+  });
+
+  const handleCheckingPass = () => {
+    if (confirmPassword !== "") {
+      if (confirmPassword !== formState.password){
+        return <p className="text-red-500 text-base">Mật khẩu không trùng khớp</p>
+      }
+    }
+  };
+
+  const handleRegister = (e) => {
+    if (e) {
+      e.preventDefault();
+    }
+    const newData = {
+      name: formState.fullName,
+      phoneNumber: formState.phoneNumber,
+      email: formState.email,
+      password: formState.password,
+    }; 
+   
+    dispatch(register(newData));
+    console.log(newData);
+    
+  };
+
+  if(isSuccess){
+    setTimeout(() => {
+      window.location.href = '/login'
+    },1000)
+  }
+
   return (
     <div className='w-full'>
       <div className='w-full flex justify-around'>
@@ -23,12 +66,63 @@ const Register = () => {
               <p className='flex justify-center mt-3 font-semibold text-2xl '>Tạo Tài Khoản</p>
               <div className='flex justify-center'>
                 <div>
-                  <TextFields label='Họ Và Tên' width='450px' />
-                  <TextFields label='Số Điện Thoại' width='450px' type='tel' />
-                  <TextFields label='Email' width='450px' type='email' />
-                  <TextFieldPassword label='Mật Khẩu' width='450px' type='password' />
-                  <TextFieldPassword label='Xác Nhận Mật Khẩu' width='450px' type='password' />
-                  <button type='submit' className='uppercase w-450 h-10 mt-5 bg-te-blue text-white rounded-md'>
+                  <TextFields
+                    label='Họ Và Tên'
+                    width='450px' 
+                    value={formState.fullName}
+                    onChange={(event) => {
+                      setFormState({
+                        ...formState,
+                        fullName: event.target.value,
+                      });
+                    }}
+                  />
+                  <TextFields
+                    label='Số Điện Thoại'
+                    width='450px' 
+                    value={formState.phoneNumber}
+                    onChange={(event) => {
+                      setFormState({
+                        ...formState,
+                        phoneNumber: event.target.value,
+                      });
+                    }}
+                  />
+                  <TextFields
+                    label='Email'
+                    width='450px' 
+                    value={formState.email}
+                    onChange={(event) => {
+                      setFormState({
+                        ...formState,
+                        email: event.target.value,
+                      });
+                    }}
+                  />
+                  <TextFieldPassword
+                    label='Mật Khẩu'
+                    width='450px' 
+                    value={formState.password}
+                    onChange={(event) => {
+                      setFormState({       
+                        ...formState,
+                        password: event.target.value,
+                      });
+                    }}
+                  />
+                  <TextFieldPassword
+                    label='Xác Nhận Mật Khẩu'
+                    width='450px' 
+                    value={confirmPassword}
+                    onChange={(event) => {
+                      setConfirmPassword(event.target.value);
+                    }}
+                  />
+                  {handleCheckingPass()}
+                  <button className='uppercase w-450 h-10 mt-5 bg-te-blue text-white rounded-md'
+                    type='submit'
+                    onClick={handleRegister}
+                  >
                     Đăng Ký
                   </button>
                   <Divider sx={{ marginTop: '16px' }}>Hoặc</Divider>
@@ -39,12 +133,10 @@ const Register = () => {
                     </button>
                     <button className='mb-2'>
                       <GoogleLoginButton width={200}/>
-                    </button>
-
+                    </button> 
                   </div>
                 </div>
               </div>
-              <div></div>
             </div>
           </form>
         </div>

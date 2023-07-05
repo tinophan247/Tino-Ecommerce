@@ -5,21 +5,21 @@ import SearchField from '../SearchField';
 import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { loginGoogleActions } from '../../../slices/loginGoogleSlice';
+import { authActions } from '../../../slices/authSlice';
 
 const Header = () => {
-  const { isLoggedIn, credentials } = useSelector((state) => state.auth);
-  const dispatch = useDispatch();
-
-  const [isLogoutVisible, setIsLogoutVisible] = useState(false);
+  const dispatch = useDispatch(); 
+  const { isLoggedIn, credentials } = useSelector((state) => state.auth); 
+  const [isLogoutVisible, setIsLogoutVisible] = useState(false); 
 
   const googleLogout = () => {
     setIsLogoutVisible((prevState) => !prevState);
   };
 
   const handleLogOut = async () => {
-    dispatch(loginGoogleActions.logout());
-    localStorage.clear();
-    console.log(localStorage);
+    dispatch(loginGoogleActions.logout()); 
+    dispatch(authActions.logout()); 
+    localStorage.clear(); 
   };
 
   return (
